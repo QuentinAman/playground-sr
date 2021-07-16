@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600;1,700;1,800&display=swap');
+@import './styles/colors.scss';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    font-family: 'Montserrat';
+    font-size: 14px;
+    line-height: 134.4%;
+    letter-spacing: -0.02em;
+}
+
+h1 {
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 49px;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: -0.02em;
+}
+
+.required::after {
+    position: absolute;
+    top: -0.15em;
+    right: 0.15em;
+    content: '*';
+}
+
+.input {
+    position: relative;
+    &::placeholder {
+        text-transform: uppercase;
+        font-weight: 600;
+    }
+
+    @apply outline-none w-full;
+}
+
+.framed-item {
+    @apply px-5 py-2 rounded border-2 border-black text-xs h-max w-full;
+
+    &:focus {
+        @apply outline-none;
+    }
+}
+
+.textarea {
+    @apply p-0.5;
+}
+
+.button {
+    word-wrap: break-word;
+    @apply max-w-full w-max min-w-14;
+}
+
+.cbg {
+    &-green,
+    &-red,
+    &-yellow,
+    &-white {
+        transition: background-color 300ms ease;
+        cursor: pointer;
+    }
+
+    &-green {
+        background-color: lighten($green, 10);
+
+        &:hover {
+            background-color: $green;
+        }
+    }
+
+    &-red {
+        background-color: lighten($red, 10);
+
+        &:hover {
+            background-color: $red;
+        }
+    }
+
+    &-yellow {
+        background-color: lighten($yellow, 10);
+
+        &:hover {
+            background-color: $yellow;
+        }
+    }
+
+    &-white {
+        background-color: $white;
+
+        &:hover {
+            background-color: darken($white, 10);
+        }
+    }
+}
