@@ -12,7 +12,7 @@ export const InputFile = ({ color }) => {
           {fileNumber == 0 ? (
             <>
               <Icon src="upload" className="mr-2" width="10px" />
-              Choisissez un fichier
+              Choisir un fichier
             </>
           ) : (
             <>

@@ -67,6 +67,13 @@ h2 {
     &-white {
         transition: background-color 300ms ease;
         cursor: pointer;
+
+        &.prevent-hover {
+            cursor: initial;
+            &:hover {
+                background-color: inherit;
+            }
+        }
     }
 
     &-green {

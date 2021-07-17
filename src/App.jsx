@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Password, Input, Textarea, InputFile } from "./components";
+import { Button, Password, Input, Textarea, InputFile, SlotStatus, InformationTag } from "./components";
 import { ComponentsDisplayer } from "./components";
 
 export const App = () => (
@@ -32,6 +32,20 @@ export const App = () => (
       <InputFile color="green" />
     </ComponentsDisplayer>
 
+    <ComponentsDisplayer title="Information Tags">
+      <InformationTag text="Agriculture / Esp.Verts" />
+      <InformationTag text="Banque / Assurance" />
+      <InformationTag text="BTP / Industrie / Énergie" />
+    </ComponentsDisplayer>
+
+    <ComponentsDisplayer title="Slots Status">
+      <SlotStatus status="available" />
+      <SlotStatus status="unavailable" />
+      <SlotStatus status="waiting" />
+      <SlotStatus status="busy" />
+      <SlotStatus status="confirmed" />
+    </ComponentsDisplayer>
+
     <ComponentsDisplayer title="Radios & Checkboxs">
 
     </ComponentsDisplayer>
@@ -49,10 +63,6 @@ export const App = () => (
     </ComponentsDisplayer>
 
     <ComponentsDisplayer title="Links">
-
-    </ComponentsDisplayer>
-
-    <ComponentsDisplayer title="Slots">
 
     </ComponentsDisplayer>
   </div>

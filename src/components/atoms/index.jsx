@@ -6,3 +6,5 @@ export * from "./Icon";
 export * from "./Password";
 export * from "./Textarea";
 export * from "./InputFile";
+export * from "./InformationTag";
+export * from "./SlotStatus";
