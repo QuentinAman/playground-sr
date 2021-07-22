@@ -40,11 +40,11 @@ h2 {
         font-weight: 600;
     }
 
-    @apply outline-none w-full;
+    @apply outline-none w-full bg-gray-100;
 }
 
 .framed-item {
-    @apply px-5 py-2 rounded border-2 border-black text-xs h-max w-full;
+    @apply px-5 py-2 rounded border-1 border-black text-xs h-max w-full bg-gray-100;
 
     &:focus {
         @apply outline-none;
@@ -52,12 +52,12 @@ h2 {
 }
 
 .textarea {
-    @apply p-0.5;
+    @apply p-0.5 bg-gray-100;
 }
 
 .button {
     word-wrap: break-word;
-    @apply max-w-full w-max min-w-14;
+    @apply max-w-full w-max;
 }
 
 .cbg {
@@ -69,10 +69,7 @@ h2 {
         cursor: pointer;
 
         &.prevent-hover {
-            cursor: initial;
-            &:hover {
-                background-color: inherit;
-            }
+            pointer-events: none;
         }
     }
 

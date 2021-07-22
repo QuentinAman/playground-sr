@@ -1,8 +1,8 @@
-import React from "react";
-import { render } from "react-dom";
+import React from 'react';
+import { render } from 'react-dom';
 
-import { App } from "./App";
+import { App } from './App';
 
-import "./styles.scss";
+import './styles.scss';
 
-render(<App />, document.querySelector("#app"));
+render(<App />, document.querySelector('#app'));

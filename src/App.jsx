@@ -1,69 +1,76 @@
-import React from "react";
-import { Button, Password, Input, Textarea, InputFile, SlotStatus, InformationTag } from "./components";
-import { ComponentsDisplayer } from "./components";
+import React from 'react';
+import {
+    Button,
+    Password,
+    Input,
+    Textarea,
+    InputFile,
+    SlotStatus,
+    InformationTag,
+    SelectMenu,
+} from './components';
+import { ComponentsDisplayer } from './components';
 
 export const App = () => (
-  <div>
-    <ComponentsDisplayer title="Boutons">
-      <Button>S'inscrire</Button>
-      <Button color="yellow">S'inscrire</Button>
-      <Button color="red">S'inscrire</Button>
-      <Button color="green">S'inscrire</Button>
-    </ComponentsDisplayer>
+    <div>
+        <ComponentsDisplayer title="Boutons">
+            <Button>S'inscrire</Button>
+            <Button color="yellow">S'inscrire</Button>
+            <Button color="red">S'inscrire</Button>
+            <Button color="green">S'inscrire</Button>
+        </ComponentsDisplayer>
 
-    <ComponentsDisplayer title="Inputs">
-      <Input />
-      <Input placeholder="Texte" />
-      <Input required placeholder="Texte" />
-      <Password placeholder="Mot de passe" />
-      <Password required placeholder="Mot de passe" />
-    </ComponentsDisplayer>
+        <ComponentsDisplayer title="Inputs">
+            <Input />
+            <Input placeholder="Texte" />
+            <Input required placeholder="Texte" />
+            <Password placeholder="Mot de passe" />
+            <Password required placeholder="Mot de passe" />
+        </ComponentsDisplayer>
 
-    <ComponentsDisplayer title="Textareas">
-      <Textarea />
-      <Textarea placeholder="Textarea" />
-      <Textarea required placeholder="Textarea" />
-    </ComponentsDisplayer>
+        <ComponentsDisplayer title="Textareas">
+            <Textarea />
+            <Textarea placeholder="Textarea" />
+            <Textarea required placeholder="Textarea" />
+        </ComponentsDisplayer>
 
-    <ComponentsDisplayer title="Input File">
-      <InputFile />
-      <InputFile color="yellow" />
-      <InputFile color="red" />
-      <InputFile color="green" />
-    </ComponentsDisplayer>
+        <ComponentsDisplayer title="Input File">
+            <InputFile />
+            <InputFile color="yellow" />
+            <InputFile color="red" />
+            <InputFile color="green" />
+        </ComponentsDisplayer>
 
-    <ComponentsDisplayer title="Information Tags">
-      <InformationTag text="Agriculture / Esp.Verts" />
-      <InformationTag text="Banque / Assurance" />
-      <InformationTag text="BTP / Industrie / Énergie" />
-    </ComponentsDisplayer>
+        <ComponentsDisplayer title="Information Tags">
+            <InformationTag text="Agriculture / Esp.Verts" />
+            <InformationTag text="Banque / Assurance" />
+            <InformationTag text="BTP / Industrie / Énergie" />
+        </ComponentsDisplayer>
 
-    <ComponentsDisplayer title="Slots Status">
-      <SlotStatus status="available" />
-      <SlotStatus status="unavailable" />
-      <SlotStatus status="waiting" />
-      <SlotStatus status="busy" />
-      <SlotStatus status="confirmed" />
-    </ComponentsDisplayer>
+        <ComponentsDisplayer title="Slots Status">
+            <SlotStatus status="available" />
+            <SlotStatus status="unavailable" />
+            <SlotStatus status="waiting" />
+            <SlotStatus status="busy" />
+            <SlotStatus status="confirmed" />
+        </ComponentsDisplayer>
 
-    <ComponentsDisplayer title="Radios & Checkboxs">
+        <ComponentsDisplayer title="Radios & Checkboxs"></ComponentsDisplayer>
 
-    </ComponentsDisplayer>
+        <ComponentsDisplayer title="Select Menu & MultiSelect Menu">
+            <SelectMenu
+                values={[
+                    { text: 'First value', option: 'value1' },
+                    { text: 'Second value', option: 'value2' },
+                    { text: 'Third value', option: 'value3' },
+                ]}
+            />
+        </ComponentsDisplayer>
 
-    <ComponentsDisplayer title="Select Menu & MultiSelect Menu">
+        <ComponentsDisplayer title="Tags"></ComponentsDisplayer>
 
-    </ComponentsDisplayer>
+        <ComponentsDisplayer title="Tooltips"></ComponentsDisplayer>
 
-    <ComponentsDisplayer title="Tags">
-
-    </ComponentsDisplayer>
-
-    <ComponentsDisplayer title="Tooltips">
-
-    </ComponentsDisplayer>
-
-    <ComponentsDisplayer title="Links">
-
-    </ComponentsDisplayer>
-  </div>
-)
+        <ComponentsDisplayer title="Links"></ComponentsDisplayer>
+    </div>
+);

@@ -11,6 +11,9 @@ module.exports = {
       },
       minWidth: {
         '14': "14em"
+      },
+      borderWidth: {
+        '1': "1px"
       }
     }
   }
