@@ -42,6 +42,7 @@ export const SelectMenu = ({ values, ...props }) => {
                             setSelected(value.option);
                             setIsVisible(false);
                         }}
+                        key={value.option}
                     >
                         {value.text}
                     </li>

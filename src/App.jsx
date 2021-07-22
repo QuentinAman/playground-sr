@@ -8,6 +8,7 @@ import {
     SlotStatus,
     InformationTag,
     SelectMenu,
+    Radio,
 } from './components';
 import { ComponentsDisplayer } from './components';
 
@@ -55,7 +56,15 @@ export const App = () => (
             <SlotStatus status="confirmed" />
         </ComponentsDisplayer>
 
-        <ComponentsDisplayer title="Radios & Checkboxs"></ComponentsDisplayer>
+        <ComponentsDisplayer title="Radios & Checkboxs">
+            <Radio
+                values={[
+                    { text: 'First value', option: 'value1' },
+                    { text: 'Second value', option: 'value2' },
+                    { text: 'Third value', option: 'value3' },
+                ]}
+            />
+        </ComponentsDisplayer>
 
         <ComponentsDisplayer title="Select Menu & MultiSelect Menu">
             <SelectMenu
