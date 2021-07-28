@@ -1,23 +1,26 @@
 import { AnimatePresence, motion } from 'framer-motion';
 import React, { useState } from 'react';
 import { Icon } from '../Icon';
+import { RequiredField } from '../RequiredField';
 
-export const SelectMenu = ({ values, ...props }) => {
+export const SelectMenu = ({ required, values, ...props }) => {
     const [selected, setSelected] = useState(values[0].option);
     const [isVisible, setIsVisible] = useState(false);
 
     return (
         <div
             {...props}
-            className="border-1 rounded border-black min-w-14 font-semibold select-none"
+            className="border-1 rounded border-black min-w-14 font-semibold select-none h-max relative"
         >
             <div
-                className={` relative px-2 cursor-pointer py-3 text-sm rounded border-black bg-gray-50 ${
+                className={`relative px-2 cursor-pointer py-3 rounded border-black bg-gray-50 ${
                     isVisible && 'border-b-1'
                 }`}
                 onClick={() => setIsVisible(!isVisible)}
             >
-                {values.find((el) => el.option == selected).text}
+                <p className="max-w-94 text-sm">
+                    {values.find((el) => el.option == selected).text}
+                </p>
                 <Icon
                     src="arrow"
                     width="12px"
@@ -28,7 +31,7 @@ export const SelectMenu = ({ values, ...props }) => {
             </div>
             <ul
                 className={`overflow-scroll transition-all duration-300 max-h-0 ${
-                    isVisible && 'max-h-64'
+                    isVisible && 'max-h-32'
                 }`}
             >
                 {values.map((value) => (
@@ -48,6 +51,7 @@ export const SelectMenu = ({ values, ...props }) => {
                     </li>
                 ))}
             </ul>
+            {required && <RequiredField />}
         </div>
     );
 };

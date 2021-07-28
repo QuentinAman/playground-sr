@@ -10,9 +10,9 @@ export const Radio = ({ values, name, ...props }) => {
                 <div className="flex items-center relative" key={value.option}>
                     {selected == value.option && (
                         <Icon
-                            src="checked"
-                            width="13px"
-                            className="absolute left-2px -top-2px events-none cursor-pointer"
+                            src="checkedradio"
+                            width="12px"
+                            className="absolute left-3px top-4px events-none cursor-pointer"
                         />
                     )}
                     <input
@@ -21,7 +21,7 @@ export const Radio = ({ values, name, ...props }) => {
                         type="radio"
                         checked={selected == value.option}
                         onChange={() => setSelected(value.option)}
-                        className="appearance-none w-4 h-4 border-black border-1 rounded-full cursor-pointer"
+                        className="appearance-none w-4 h-4 border-black border-2 rounded-full cursor-pointer"
                     />
                     <label
                         className="ml-3 cursor-pointer"

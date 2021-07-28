@@ -1,0 +1,19 @@
+.tamere::before {
+    content: '';
+    position: absolute;
+    height: 2rem;
+    background: linear-gradient(#f9fafb 50%, rgba(249, 250, 251, 0));
+    top: 0;
+    left: 1rem;
+    right: 1.7rem;
+}
+
+.tamere::after {
+    content: '';
+    position: absolute;
+    height: 2rem;
+    background: linear-gradient(rgba(249, 250, 251, 0.01), #f9fafb 50%);
+    bottom: 0;
+    left: 1rem;
+    right: 1.7rem;
+}

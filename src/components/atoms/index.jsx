@@ -10,3 +10,4 @@ export * from './InformationTag';
 export * from './SlotStatus';
 export * from './SelectMenu';
 export * from './Radio';
+export * from './Tooltip';

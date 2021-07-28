@@ -12,11 +12,18 @@ module.exports = {
             minWidth: {
                 14: '14em',
             },
+            maxWidth: {
+                94: '94%',
+            },
             borderWidth: {
                 1: '1px',
             },
             inset: {
-                '2px': '2px',
+                '4px': '4px',
+                '3px': '3px',
+            },
+            transitionProperty: {
+                tooltip: 'max-height opacity',
             },
         },
     },
