@@ -1,8 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Icon } from '../';
 
-import './style.css';
-
 export const Tooltip = ({ className, children, ...props }) => {
     const [isVisible, setIsVisible] = useState(false);
     const tooltipRef = useRef(null);

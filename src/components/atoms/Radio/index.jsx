@@ -7,10 +7,14 @@ export const Radio = ({ values, name, ...props }) => {
     return (
         <div {...props}>
             {values.map((value) => (
-                <div className="flex items-center relative" key={value.option}>
+                <label
+                    className="cursor-pointer flex items-center relative"
+                    htmlFor={value.option}
+                    key={value.option}
+                >
                     {selected == value.option && (
                         <Icon
-                            src="checkedradio"
+                            src="checkedinput"
                             width="12px"
                             className="absolute left-3px top-4px events-none cursor-pointer"
                         />
@@ -21,15 +25,10 @@ export const Radio = ({ values, name, ...props }) => {
                         type="radio"
                         checked={selected == value.option}
                         onChange={() => setSelected(value.option)}
-                        className="appearance-none w-4 h-4 border-black border-2 rounded-full cursor-pointer"
+                        className="appearance-none w-4 h-4 border-black border-2 rounded-full cursor-pointer mr-3"
                     />
-                    <label
-                        className="ml-3 cursor-pointer"
-                        htmlFor={value.option}
-                    >
-                        {value.text}
-                    </label>
-                </div>
+                    {value.text}
+                </label>
             ))}
         </div>
     );

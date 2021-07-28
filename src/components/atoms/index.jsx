@@ -11,3 +11,4 @@ export * from './SlotStatus';
 export * from './SelectMenu';
 export * from './Radio';
 export * from './Tooltip';
+export * from './Checkbox';

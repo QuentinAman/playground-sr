@@ -9,6 +9,9 @@ module.exports = {
             height: {
                 max: 'max-content',
             },
+            maxHeight: {
+                max: 'max-content',
+            },
             minWidth: {
                 14: '14em',
             },
@@ -21,6 +24,7 @@ module.exports = {
             inset: {
                 '4px': '4px',
                 '3px': '3px',
+                '2.5px': '2.5px',
             },
             transitionProperty: {
                 tooltip: 'max-height opacity',
