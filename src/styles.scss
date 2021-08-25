@@ -64,17 +64,57 @@ h2 {
     @apply max-w-full w-max;
 }
 
+.link {
+    &-blue,
+    &-darkred,
+    &-lightgray,
+    &-gray {
+        transition: background-color 300ms ease;
+    }
+
+    &-blue {
+        background-color: rgba(0, 158, 195, 0.15);
+
+        &:hover {
+            background-color: rgba(0, 159, 195, 0.5);
+        }
+    }
+
+    &-darkred {
+        background-color: rgba(190, 12, 53, 0.15);
+
+        &:hover {
+            background-color: rgba(190, 12, 53, 0.5);
+        }
+    }
+
+    &-lightgray {
+        background-color: rgba(210, 210, 210, 0.25);
+
+        &:hover {
+            background-color: rgba(210, 210, 210, 0.6);
+        }
+    }
+
+    &-gray {
+        background-color: rgba(86, 86, 86, 0.15);
+
+        &:hover {
+            background-color: rgba(86, 86, 86, 0.5);
+        }
+    }
+}
+
+.prevent-hover {
+    pointer-events: none;
+}
+
 .cbg {
     &-green,
     &-red,
     &-yellow,
     &-white {
         transition: background-color 300ms ease;
-        cursor: pointer;
-
-        &.prevent-hover {
-            pointer-events: none;
-        }
     }
 
     &-green {

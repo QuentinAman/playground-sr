@@ -12,3 +12,5 @@ export * from './SelectMenu';
 export * from './Radio';
 export * from './Tooltip';
 export * from './Checkbox';
+export * from './Link';
+export * from './MultiSelectMenu';

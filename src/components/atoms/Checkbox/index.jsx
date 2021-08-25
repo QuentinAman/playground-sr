@@ -11,7 +11,7 @@ export const Checkbox = ({
 }) => (
     <label
         {...props}
-        className={`${className} flex items-center ml-3 cursor-pointer relative`}
+        className={`${className} flex items-center ml-3 cursor-pointer relative select-none`}
     >
         {isChecked && (
             <Icon

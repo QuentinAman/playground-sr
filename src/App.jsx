@@ -11,6 +11,8 @@ import {
     Radio,
     Tooltip,
     Checkbox,
+    Link,
+    MultiSelectMenu,
 } from './components';
 import { ComponentsDisplayer } from './components';
 
@@ -38,6 +40,16 @@ export const App = () => {
         },
     ]);
 
+    const [selectedValue, setSelectedValue] = useState({
+        text: 'First value',
+        option: 'value1',
+    });
+
+    const [multiSelectedValues, setMultiSelectedValues] = useState([
+        { text: 'First value', option: 'value1' },
+        { text: 'Seventh value', option: 'value7' },
+    ]);
+
     const handleCheckboxsChange = (index) => (value) => {
         const newCheckboxs = [...checkboxs];
         newCheckboxs[index].checked = value;
@@ -45,7 +57,7 @@ export const App = () => {
     };
 
     return (
-        <div className="pb-96">
+        <div>
             <ComponentsDisplayer title="Boutons">
                 <Button>S'inscrire</Button>
                 <Button color="yellow">S'inscrire</Button>
@@ -115,6 +127,8 @@ export const App = () => {
             <ComponentsDisplayer title="Select Menu & MultiSelect Menu">
                 <ComponentsDisplayer title="Select Menu">
                     <SelectMenu
+                        selected={selectedValue}
+                        setSelected={setSelectedValue}
                         values={[
                             { text: 'First value', option: 'value1' },
                             { text: 'Second value', option: 'value2' },
@@ -126,6 +140,9 @@ export const App = () => {
                         ]}
                     />
                     <SelectMenu
+                        selected={selectedValue}
+                        setSelected={setSelectedValue}
+                        placeholder
                         values={[
                             { text: 'First value', option: 'value1' },
                             { text: 'Second value', option: 'value2' },
@@ -138,6 +155,7 @@ export const App = () => {
                         required
                     />
                     <SelectMenu
+                        placeholder="This is a placeholder"
                         values={[
                             {
                                 text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
@@ -170,10 +188,23 @@ export const App = () => {
                         ]}
                     />
                 </ComponentsDisplayer>
-                <ComponentsDisplayer title="MultiSelect Menu"></ComponentsDisplayer>
+                <ComponentsDisplayer title="MultiSelect Menu">
+                    <MultiSelectMenu
+                        placeholder="Select one or more values"
+                        selectedValues={multiSelectedValues}
+                        setSelectedValues={setMultiSelectedValues}
+                        values={[
+                            { text: 'First value', option: 'value1' },
+                            { text: 'Second value', option: 'value2' },
+                            { text: 'Third value', option: 'value3' },
+                            { text: 'Fourth value', option: 'value4' },
+                            { text: 'Fifth value', option: 'value5' },
+                            { text: 'Sixth value', option: 'value6' },
+                            { text: 'Seventh value', option: 'value7' },
+                        ]}
+                    />
+                </ComponentsDisplayer>
             </ComponentsDisplayer>
-
-            <ComponentsDisplayer title="Tags"></ComponentsDisplayer>
 
             <ComponentsDisplayer title="Tooltips">
                 <Tooltip className="justify-self-start">
@@ -265,7 +296,60 @@ export const App = () => {
                 </Tooltip>
             </ComponentsDisplayer>
 
-            <ComponentsDisplayer title="Links"></ComponentsDisplayer>
+            <ComponentsDisplayer title="Links">
+                <div className="text-sm">
+                    This is a blue&nbsp;
+                    <Link href="https://www.google.com" color="blue">
+                        link
+                    </Link>
+                </div>
+                <div className="text-sm">
+                    This is a darkred&nbsp;
+                    <Link href="https://www.google.com" color="darkred">
+                        link
+                    </Link>
+                </div>
+                <div className="text-sm">
+                    This is a lightgray&nbsp;
+                    <Link href="https://www.google.com" color="lightgray">
+                        link
+                    </Link>
+                </div>
+                <div className="text-sm">
+                    This is a gray&nbsp;
+                    <Link href="https://www.google.com" color="gray">
+                        link
+                    </Link>
+                </div>
+                <Link
+                    href="https://www.google.com"
+                    color="blue"
+                    isUnique={true}
+                >
+                    Unique link
+                </Link>
+                <Link
+                    href="https://www.google.com"
+                    color="darkred"
+                    isUnique={true}
+                >
+                    Unique link
+                </Link>
+                <Link
+                    href="https://www.google.com"
+                    color="lightgray"
+                    isUnique={true}
+                >
+                    Unique link
+                </Link>
+                <Link
+                    href="https://www.google.com"
+                    color="gray"
+                    isUnique={true}
+                >
+                    Unique link
+                </Link>
+            </ComponentsDisplayer>
         </div>
     );
 };

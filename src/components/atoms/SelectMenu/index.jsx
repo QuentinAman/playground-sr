@@ -3,8 +3,14 @@ import React, { useState } from 'react';
 import { Icon } from '../Icon';
 import { RequiredField } from '../RequiredField';
 
-export const SelectMenu = ({ required, values, ...props }) => {
-    const [selected, setSelected] = useState(values[0].option);
+export const SelectMenu = ({
+    required,
+    selected,
+    setSelected,
+    values,
+    placeholder = '',
+    ...props
+}) => {
     const [isVisible, setIsVisible] = useState(false);
 
     return (
@@ -19,7 +25,7 @@ export const SelectMenu = ({ required, values, ...props }) => {
                 onClick={() => setIsVisible(!isVisible)}
             >
                 <p className="max-w-94 text-sm">
-                    {values.find((el) => el.option == selected).text}
+                    {selected ? selected.text : placeholder}
                 </p>
                 <Icon
                     src="arrow"
@@ -42,7 +48,7 @@ export const SelectMenu = ({ required, values, ...props }) => {
                                 : 'hover:bg-gray-300 cursor-pointer transition-colors duration-150'
                         }`}
                         onClick={() => {
-                            setSelected(value.option);
+                            setSelected(value);
                             setIsVisible(false);
                         }}
                         key={value.option}
