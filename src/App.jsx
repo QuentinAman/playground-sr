@@ -13,6 +13,8 @@ import {
     Checkbox,
     Link,
     MultiSelectMenu,
+    Slot,
+    Meeting
 } from './components';
 import { ComponentsDisplayer } from './components';
 
@@ -58,6 +60,18 @@ export const App = () => {
 
     return (
         <div>
+            <ComponentsDisplayer title="Meetings">
+                <Meeting status="waiting"/>
+                <Meeting status="busy"/>
+            </ComponentsDisplayer>
+
+            <ComponentsDisplayer title="Slots">
+                <Slot status="available" hours="14h00 - 14h15" onClick={() => console.log("available")}/>
+                <Slot status="unavailable" hours="14h00 - 14h15"/>
+                <Slot status="waiting" hours="14h00 - 14h15" name="Soro Founvarah Bellucci"/>
+                <Slot status="busy" hours="14h00 - 14h15" name="Soro Founvarah Bellucci"/>
+            </ComponentsDisplayer>
+
             <ComponentsDisplayer title="Boutons">
                 <Button>S'inscrire</Button>
                 <Button color="yellow">S'inscrire</Button>

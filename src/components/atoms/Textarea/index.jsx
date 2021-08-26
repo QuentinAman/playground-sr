@@ -3,7 +3,7 @@ import React from 'react';
 import { RequiredField } from '../';
 
 export const Textarea = ({ className, ...props }) => (
-    <div className="relative textarea framed-item">
+    <div className="relative textarea framed-item-p">
         <textarea
             {...props}
             rows="5"

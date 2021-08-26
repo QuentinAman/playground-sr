@@ -14,6 +14,7 @@ body {
     font-size: 14px;
     line-height: 134.4%;
     letter-spacing: -0.02em;
+    height: max-content;
 }
 
 h1 {
@@ -48,11 +49,15 @@ h2 {
 }
 
 .framed-item {
-    @apply px-5 py-2 rounded border-1 border-black text-xs h-max w-full bg-gray-100;
+    @apply rounded border-1 border-black text-xs w-full bg-gray-100;
 
     &:focus {
         @apply outline-none;
     }
+}
+
+.framed-item-p {
+    @apply px-5 py-2 framed-item h-max;
 }
 
 .textarea {
@@ -61,7 +66,11 @@ h2 {
 
 .button {
     word-wrap: break-word;
-    @apply max-w-full w-max;
+    @apply max-w-full;
+}
+
+.button-max {
+    width: max-content !important;
 }
 
 .link {

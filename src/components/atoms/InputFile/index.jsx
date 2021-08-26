@@ -16,7 +16,7 @@ export const InputFile = ({ color }) => {
                 htmlFor="input-file"
                 className={`${
                     color ? `cbg-${color}` : 'cbg-white'
-                } button framed-item font-bold uppercase flex select-none`}
+                } button framed-item-p font-bold uppercase flex select-none`}
             >
                 <div className="flex text-xs">
                     {fileNumber == 0 ? (

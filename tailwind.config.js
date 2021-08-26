@@ -1,6 +1,4 @@
 module.exports = {
-    mode: 'jit',
-    purge: ['./public/**/*.html', './src/**/*.{js,jsx,ts,tsx,vue}'],
     theme: {
         extend: {
             gridTemplateColumns: {
@@ -20,6 +18,8 @@ module.exports = {
             },
             maxWidth: {
                 94: '94%',
+                slotCard: '11rem',
+                meetingCard: '22rem',
             },
             borderWidth: {
                 1: '1px',
