@@ -14,7 +14,8 @@ import {
     Link,
     MultiSelectMenu,
     Slot,
-    Meeting
+    Meeting,
+    ColorCard
 } from './components';
 import { ComponentsDisplayer } from './components';
 
@@ -60,6 +61,10 @@ export const App = () => {
 
     return (
         <div>
+            <ComponentsDisplayer title="Color Cards">
+                <ColorCard tag="Agriculture / Esp.Verts" heading="Crédit Agricole du Languedoc">Mec</ColorCard>
+            </ComponentsDisplayer>
+
             <ComponentsDisplayer title="Meetings">
                 <Meeting status="waiting"/>
                 <Meeting status="busy"/>
