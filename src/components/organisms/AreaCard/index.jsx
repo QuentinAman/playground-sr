@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from '../../atoms';
-import { Card } from '../../atoms/Card';
+import { Card } from '../../molecules';
 
 export const AreaCard = ({
     title,
