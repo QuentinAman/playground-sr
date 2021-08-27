@@ -4,11 +4,12 @@ export const ComponentsDisplayer = ({
     title,
     children,
     className,
+    columns = "auto-fit",
     ...props
 }) => (
     <div
         {...props}
-        className={`relative grid grid-cols-auto-fit justify-items-center gap-5 border-black border-2 rounded-2xl p-5 m-5 mt-10 ${
+        className={`relative grid grid-cols-${columns} justify-items-center gap-5 border-black border-2 rounded-2xl p-5 m-5 mt-10 ${
             className || ''
         }`}
     >
