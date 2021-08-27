@@ -4,7 +4,7 @@ import { Icon } from '..';
 export const InformationTag = ({ color, text, icon }) => {
     return (
         <div
-            className={`flex rounded-md py-0.5 px-2 text-xs items-center uppercase font-semibold prevent-hover cbg-${
+            className={`flex w-max rounded-md py-0.5 px-2 text-xs items-center uppercase font-semibold prevent-hover cbg-${
                 color || 'white'
             }`}
         >

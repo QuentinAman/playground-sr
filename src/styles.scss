@@ -49,11 +49,15 @@ h2 {
 }
 
 .framed-item {
-    @apply px-5 py-2 rounded border-1 border-black text-xs h-max w-full bg-gray-100;
+    @apply rounded border-1 border-black text-xs w-full bg-gray-100;
 
     &:focus {
         @apply outline-none;
     }
+}
+
+.framed-item-p {
+    @apply px-5 py-2 framed-item h-max;
 }
 
 .textarea {

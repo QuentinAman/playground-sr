@@ -5,6 +5,6 @@ export const Button = ({ color, className, ...props }) => (
         {...props}
         className={`${color ? `cbg-${color}` : 'cbg-white'} ${
             className || ''
-        } button framed-item font-bold uppercase button-max`}
+        } button framed-item-p font-bold uppercase button-max`}
     />
 );

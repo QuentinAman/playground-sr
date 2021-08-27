@@ -17,6 +17,9 @@ import {
     AddDocumentModal,
     EditJobModal,
     AreaCard,
+    Slot,
+    Meeting,
+    ColorCard,
 } from './components';
 import { ComponentsDisplayer } from './components';
 
@@ -102,6 +105,39 @@ export const App = () => {
                 <AddJobModal />
                 <AddDocumentModal />
                 <EditJobModal />
+            </ComponentsDisplayer>
+
+            <ComponentsDisplayer title="Color Cards">
+                <ColorCard
+                    tag="Agriculture / Esp.Verts"
+                    heading="Crédit Agricole du Languedoc"
+                >
+                    Mec
+                </ColorCard>
+            </ComponentsDisplayer>
+
+            <ComponentsDisplayer title="Meetings">
+                <Meeting status="waiting" />
+                <Meeting status="busy" />
+            </ComponentsDisplayer>
+
+            <ComponentsDisplayer title="Slots">
+                <Slot
+                    status="available"
+                    hours="14h00 - 14h15"
+                    onClick={() => console.log('available')}
+                />
+                <Slot status="unavailable" hours="14h00 - 14h15" />
+                <Slot
+                    status="waiting"
+                    hours="14h00 - 14h15"
+                    name="Soro Founvarah Bellucci"
+                />
+                <Slot
+                    status="busy"
+                    hours="14h00 - 14h15"
+                    name="Soro Founvarah Bellucci"
+                />
             </ComponentsDisplayer>
 
             <ComponentsDisplayer title="Boutons">

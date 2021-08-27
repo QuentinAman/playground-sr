@@ -20,6 +20,8 @@ module.exports = {
             },
             maxWidth: {
                 94: '94%',
+                slotCard: '11rem',
+                meetingCard: '22rem',
             },
             borderWidth: {
                 1: '1px',
