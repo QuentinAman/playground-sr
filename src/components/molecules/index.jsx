@@ -5,3 +5,4 @@ export * from './Slot';
 export * from './Meeting';
 export * from './ColorCard';
 export * from './Card';
+export * from './Divider';

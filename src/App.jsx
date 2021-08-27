@@ -20,6 +20,7 @@ import {
     Slot,
     Meeting,
     ColorCard,
+    Divider
 } from './components';
 import { ComponentsDisplayer } from './components';
 
@@ -65,6 +66,20 @@ export const App = () => {
 
     return (
         <div>
+            <ComponentsDisplayer columns="1" className="items-center" title="Dividers">
+                <Divider/>
+                <Divider>
+                    <Button>Button 1</Button>
+                    <Button>Button 2</Button>
+                </Divider>
+                <Divider bottom right>
+                    <Button>Button 1</Button>
+                    <Button>Button 2</Button>
+                </Divider>
+                <Divider right>
+                    <h2>Test</h2>
+                </Divider>
+            </ComponentsDisplayer>
             <ComponentsDisplayer title="Card">
                 <AreaCard
                     title="L’espace recrutement"
