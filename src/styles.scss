@@ -14,6 +14,7 @@ body {
     font-size: 14px;
     line-height: 134.4%;
     letter-spacing: -0.02em;
+    height: max-content;
 }
 
 h1 {
@@ -61,7 +62,11 @@ h2 {
 
 .button {
     word-wrap: break-word;
-    @apply max-w-full w-max;
+    @apply max-w-full;
+}
+
+.button-max {
+    width: max-content !important;
 }
 
 .link {

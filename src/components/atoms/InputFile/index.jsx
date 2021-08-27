@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { Icon } from '../';
 
-export const InputFile = ({ color }) => {
+export const InputFile = ({ color, title, className }) => {
     const [fileNumber, setFileNumber] = useState(0);
 
     return (
-        <div>
+        <div className={className || ''}>
             <input
                 onChange={(e) => setFileNumber(e.currentTarget.files.length)}
                 id="input-file"
@@ -16,13 +16,13 @@ export const InputFile = ({ color }) => {
                 htmlFor="input-file"
                 className={`${
                     color ? `cbg-${color}` : 'cbg-white'
-                } button framed-item font-bold uppercase flex select-none`}
+                } button framed-item font-bold uppercase flex justify-center select-none w-full`}
             >
                 <div className="flex text-xs">
                     {fileNumber == 0 ? (
                         <>
                             <Icon src="upload" className="mr-2" width="10px" />
-                            Choisir un fichier
+                            {title || 'Choisir un fichier'}
                         </>
                     ) : (
                         <>

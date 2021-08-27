@@ -13,6 +13,10 @@ import {
     Checkbox,
     Link,
     MultiSelectMenu,
+    AddJobModal,
+    AddDocumentModal,
+    EditJobModal,
+    AreaCard,
 } from './components';
 import { ComponentsDisplayer } from './components';
 
@@ -58,6 +62,48 @@ export const App = () => {
 
     return (
         <div>
+            <ComponentsDisplayer title="Card">
+                <AreaCard
+                    title="L’espace recrutement"
+                    bgColor="#009EC3"
+                    textColor="white"
+                    icon="recruitment"
+                    subTitle="Vous recherchez un emploi ?"
+                    description="Les entreprises proposent des postes sur divers secteurs d’activités. Cet espace est géré par Pôle emploi et les Missions locales."
+                    logoOrganizer={['missions-locales.svg', 'pole-emploi.svg']}
+                />
+                <AreaCard
+                    title="L’espace information et orientation"
+                    bgColor="#D2D2D2"
+                    icon="orientation"
+                    subTitle="Vous recherchez l’information ?"
+                    description="Rencontrer des professionnels de l’Orientation afin de bénéficier d’informations, d’appui, de conseils pratiques, de propositions personnalisées sur les nombreux dispositifs et mesures emploi formation."
+                    logoOrganizer={['occitanie.png']}
+                />
+                <AreaCard
+                    title="L’espace formation"
+                    bgColor="#BE0C35"
+                    textColor="white"
+                    icon="formation"
+                    subTitle="Vous recherchez une formation ?"
+                    description="Les organismes de formation et établissements scolaires cofinancés par la Région seront présents pour vous présenter l’ensemble de l’offre régionale de formation."
+                />
+                <AreaCard
+                    title="L’espace création d’entreprise"
+                    bgColor="#565656"
+                    textColor="white"
+                    icon="create-company"
+                    subTitle="Vous souhaitez créer ou reprendre une entreprise ?"
+                    description="Cet espace confidentiel vous permettra de rencontrer les interlocuteurs incontournables pour démarrer votre projet et proposera une sensibilisation à la création d’entreprise."
+                />
+            </ComponentsDisplayer>
+
+            <ComponentsDisplayer title="Modal">
+                <AddJobModal />
+                <AddDocumentModal />
+                <EditJobModal />
+            </ComponentsDisplayer>
+
             <ComponentsDisplayer title="Boutons">
                 <Button>S'inscrire</Button>
                 <Button color="yellow">S'inscrire</Button>
@@ -81,9 +127,9 @@ export const App = () => {
 
             <ComponentsDisplayer title="Input File">
                 <InputFile />
-                <InputFile color="yellow" />
-                <InputFile color="red" />
-                <InputFile color="green" />
+                <InputFile title="Importer un document" color="yellow" />
+                <InputFile title="Parcourir" color="red" />
+                <InputFile title="Sélectionner" color="green" />
             </ComponentsDisplayer>
 
             <ComponentsDisplayer title="Information Tags">

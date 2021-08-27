@@ -1,6 +1,4 @@
 module.exports = {
-    mode: 'jit',
-    purge: ['./public/**/*.html', './src/**/*.{js,jsx,ts,tsx,vue}'],
     theme: {
         extend: {
             gridTemplateColumns: {
@@ -17,6 +15,8 @@ module.exports = {
             },
             minWidth: {
                 14: '14em',
+                17: '17rem',
+                21: '21rem',
             },
             maxWidth: {
                 94: '94%',
@@ -31,6 +31,9 @@ module.exports = {
             },
             transitionProperty: {
                 tooltip: 'max-height opacity',
+            },
+            scale: {
+                30: '.8',
             },
         },
     },

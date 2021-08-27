@@ -14,3 +14,5 @@ export * from './Tooltip';
 export * from './Checkbox';
 export * from './Link';
 export * from './MultiSelectMenu';
+export * from './Modal';
+export * from './Card';
