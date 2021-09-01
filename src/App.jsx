@@ -163,9 +163,9 @@ export const App = () => {
 
             <ComponentsDisplayer title="Input File">
                 <InputFile />
-                <InputFile title="Importer un document" color="yellow" />
-                <InputFile title="Parcourir" color="red" />
-                <InputFile title="Sélectionner" color="green" />
+                <InputFile text="Importer un document" color="yellow" />
+                <InputFile text="Parcourir" color="red" />
+                <InputFile text="Sélectionner" color="green" />
             </ComponentsDisplayer>
 
             <ComponentsDisplayer title="Information Tags">

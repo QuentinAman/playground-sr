@@ -1,10 +1,26 @@
 import React from 'react';
 import { Icon } from '..';
 
-export const InformationTag = ({ color, text, icon }) => {
+/**
+ * Component information tag
+ * @component
+ *
+ * @example
+ *   <InformationTag color="blue" icon="arrow" text="Agriculture / Esp.Verts" />
+ *
+ * @type {React.FC<{
+ *  text: String
+ *  className?: String,
+ *  icon?: String
+ *  color?: "green"|"red"|"yellow"|"white"
+ * }>}
+ */
+export const InformationTag = ({ className, color, text, icon, ...props }) => {
     return (
         <div
-            className={`flex w-max rounded-md py-0.5 px-2 text-xs items-center uppercase font-semibold prevent-hover cbg-${
+            className={` ${
+                className || ''
+            } flex w-max rounded-md py-0.5 px-2 text-xs items-center uppercase font-semibold prevent-hover cbg-${
                 color || 'white'
             }`}
         >

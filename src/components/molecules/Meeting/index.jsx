@@ -2,12 +2,26 @@ import React from 'react';
 import { Status } from './status';
 import { SlotStatus, Button } from '../../atoms/';
 
+/**
+ * Component button
+ * @component
+ *
+ * @example
+ *   <Button width="w-full" color="blue">My button</Button>
+ *
+ * @type {React.FC<{
+ *  status: "available"|"unavailable"|"waiting"|"busy"|"confirmed",
+ *  className?: String
+ */
 export const Meeting = ({ status, ...props }) => {
     const statusInfos = Status[status];
 
     return (
         <div
-            className={`max-w-meetingCard framed-item w-full flex flex-col overflow-hidden`}
+            {...props}
+            className={`${
+                className || ''
+            } max-w-meetingCard framed-item w-full flex flex-col overflow-hidden`}
         >
             <div
                 className={`cbg-${statusInfos.color} p-2 prevent-hover font-bold grid grid-cols-1 gap-10`}

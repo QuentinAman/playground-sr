@@ -2,7 +2,19 @@ import React from 'react';
 
 import { RequiredField } from '../';
 
-export const Textarea = ({ className, ...props }) => (
+/**
+ * Component textarea
+ * @component
+ *
+ * @example
+ *   <Textarea required placeholder="Textarea" />
+ *
+ * @type {React.FC<{
+ *  className?: String,
+ *  required?: Boolean
+ * }>}
+ */
+export const Textarea = ({ className, required, ...props }) => (
     <div className="relative textarea framed-item-p w-full">
         <textarea
             {...props}
@@ -11,6 +23,6 @@ export const Textarea = ({ className, ...props }) => (
                 className || ''
             }`}
         />
-        {props.required && <RequiredField />}
+        {required && <RequiredField />}
     </div>
 );

@@ -10,10 +10,7 @@ export const AddJobModal = () => {
                 placeholder="Ou entrez un lien de definitıon"
                 className="mb-3 mt-3"
             />
-            <InputFile
-                placeholder="Ou importer une définition"
-                className="mb-4"
-            />
+            <InputFile text="Ou importer une définition" className="mb-4" />
             <Button color="green">Envoyer</Button>
         </Modal>
     );

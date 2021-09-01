@@ -1,6 +1,22 @@
 import React from 'react';
 import { Icon } from '../Icon';
 
+/**
+ * Component link
+ * @component
+ *
+ * @example
+ *   <Link href="localhost/home" isUnique={true} color="blue">Go to home</Link>
+ *
+ * @type {React.FC<{
+ *  href: String,
+ *  isUnique: Boolean,
+ *  color: "blue"|"darkred"|"lightgray"|"gray"|"white",
+ *  className?: String,
+ *  text?: String,
+ *  children: React.ReactNode
+ * }>}
+ */
 export const Link = ({
     href,
     color = 'lightgray',
