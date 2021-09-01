@@ -2,6 +2,34 @@ import { AnimatePresence, motion } from 'framer-motion';
 import React, { useEffect, useState } from 'react';
 import { Icon, SelectMenu } from '../';
 
+/**
+ * Component multi select menu
+ * @component
+ *
+ * @example
+ *   <MultiSelectMenu
+        placeholder="Select one or more values"
+        selectedValues={multiSelectedValues}
+        setSelectedValues={setMultiSelectedValues}
+        values={[
+            { text: 'First value', option: 'value1' },
+            { text: 'Second value', option: 'value2' },
+            { text: 'Third value', option: 'value3' },
+            { text: 'Fourth value', option: 'value4' },
+            { text: 'Fifth value', option: 'value5' },
+            { text: 'Sixth value', option: 'value6' },
+            { text: 'Seventh value', option: 'value7' },
+        ]}
+    />
+ *
+ * @type {React.FC<{
+ *  selectedValues: [{text: String, option: String}],
+ *  setSelectedValues: Function,
+ *  placeholder?: String,
+ *  values: [{text: String, option: String}]
+ *  className?: String,
+ * }>}
+ */
 export const MultiSelectMenu = ({
     selectedValues,
     setSelectedValues,

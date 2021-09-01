@@ -1,11 +1,35 @@
 import React from 'react';
 
-export const Divider = ({ children, right, bottom, className, ...props }) => {
+/**
+ * Component divider
+ * @component
+ *
+ * @example
+ *  <Divider bottom right>
+        <Button>Button 1</Button>
+        <Button>Button 2</Button>
+    </Divider>
+ *
+ * @type {React.FC<{
+ *  className?: String,
+ *  right?: String,
+ *  bottom?: String;
+ * }>}
+ */
+export const Divider = ({ children, className, right, bottom, ...props }) => {
     return (
-        <div className={`w-full flex ${right ? "flex-row-reverse" : ""} gap-3 ${className}`}>
-                {children}
-            <div className={`border-solid w-full border-b self-${bottom ? "end" : "center"} border-black`}>
-            </div>
+        <div
+            {...props}
+            className={`${className || ''} w-full flex ${
+                right ? 'flex-row-reverse' : ''
+            } gap-3`}
+        >
+            {children}
+            <div
+                className={`border-solid w-full border-b self-${
+                    bottom ? 'end' : 'center'
+                } border-black`}
+            ></div>
         </div>
     );
 };

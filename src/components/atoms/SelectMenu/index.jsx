@@ -2,6 +2,34 @@ import React, { useState } from 'react';
 import { Icon } from '../Icon';
 import { RequiredField } from '../RequiredField';
 
+/**
+ * Component select menu
+ * @component
+ *
+ * @example
+ *  <SelectMenu
+        selected={selectedValue}
+        setSelected={setSelectedValue}
+        values={[
+            { text: 'First value', option: 'value1' },
+            { text: 'Second value', option: 'value2' },
+            { text: 'Third value', option: 'value3' },
+            { text: 'Fourth value', option: 'value4' },
+            { text: 'Fifth value', option: 'value5' },
+            { text: 'Sixth value', option: 'value6' },
+            { text: 'Seventh value', option: 'value7' },
+        ]}
+    />
+ *
+ * @type {React.FC<{
+ *  required: Boolean,
+ *  className?: String,
+ *  selected: {text: String, option: String},
+ *  setSelected: Function,
+ *  values: [{text: String, option: String}],
+ *  placeholder?: String
+ * }>}
+ */
 export const SelectMenu = ({
     required,
     className = '',
@@ -10,6 +38,7 @@ export const SelectMenu = ({
     setSelected,
     values,
     placeholder = '',
+    className,
     ...props
 }) => {
     const [isVisible, setIsVisible] = useState(false);

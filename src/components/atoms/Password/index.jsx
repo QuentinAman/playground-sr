@@ -1,15 +1,29 @@
 import React, { useState } from 'react';
 import { Input, Icon } from '../';
 
-export const Password = ({ ...props }) => {
+/**
+ * Component password
+ * @component
+ *
+ * @example
+ *   <Password placeholder="Password" required/>
+ *
+ * @type {React.FC<{
+ *  placeholder: String,
+ *  className?: String,
+ *  required?: Boolean
+ * }>}
+ */
+export const Password = ({ placeholder, className, ...props }) => {
     const [isHidden, setIsHidden] = useState(true);
 
     return (
         <div className="relative w-full">
             <Input
                 {...props}
+                placeholder={placeholder}
                 type={isHidden ? 'password' : 'text'}
-                className="pr-6"
+                className={`${className || ''} pr-6`}
             />
             <Icon
                 className="absolute right-3.5 top-2 cursor-pointer"

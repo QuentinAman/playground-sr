@@ -1,6 +1,19 @@
 import React from 'react';
 import { Icon } from '../Icon';
 
+/**
+ * Component modal
+ * @component
+ *
+ * @example
+ *   <Modal title="Log in">Log in form</Link>
+ *
+ * @type {React.FC<{
+ *  title: String,
+ *  className?: String,
+ *  children: React.ReactNode
+ * }>}
+ */
 export const Modal = ({ children, title, className, ...props }) => {
     return (
         <div

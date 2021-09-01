@@ -1,6 +1,26 @@
 import React from 'react';
 import { Icon } from '../';
 
+/**
+ * Component checkbox
+ * @component
+ *
+ * @example
+ *  <Checkbox
+ *      isChecked={checked}
+ *      label="Label"
+ *      name="Name"
+ *      setIsChecked={updateChecked}
+ *  />
+ *
+ * @type {React.FC<{
+ *  isChecked: Boolean,
+ *  setIsChecked: Function,
+ *  name?: String,
+ *  label?: String,
+ *  className?: String
+ * }>}
+ */
 export const Checkbox = ({
     isChecked,
     setIsChecked,

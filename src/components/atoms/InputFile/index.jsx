@@ -1,11 +1,24 @@
 import React, { useState } from 'react';
 import { Icon } from '../';
 
-export const InputFile = ({ color, title, caution, className }) => {
+/**
+ * Component input file
+ * @component
+ *
+ * @example
+ *   <InputFile color="blue" text="Import a file"/>
+ *
+ * @type {React.FC<{
+ *  color: "green"|"red"|"yellow"|"white",
+ *  className?: String,
+ *  text?: String
+ * }>}
+ */
+export const InputFile = ({ color, text, className, ...props }) => {
     const [fileNumber, setFileNumber] = useState(0);
 
     return (
-        <div className={className || ''}>
+        <div {...props} className={className || ''}>
             <input
                 onChange={(e) => setFileNumber(e.currentTarget.files.length)}
                 id="input-file"
@@ -22,7 +35,7 @@ export const InputFile = ({ color, title, caution, className }) => {
                     {fileNumber == 0 ? (
                         <>
                             <Icon src="upload" className="mr-2" width="10px" />
-                            {title || 'Choisir un fichier'}
+                            {text || 'Choisir un fichier'}
                         </>
                     ) : (
                         <>

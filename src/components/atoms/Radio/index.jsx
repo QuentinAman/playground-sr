@@ -1,11 +1,30 @@
 import React, { useState } from 'react';
 import { Icon } from '../';
 
-export const Radio = ({ values, name, ...props }) => {
+/**
+ * Component radio
+ * @component
+ *
+ * @example
+ *   <Radio
+        values={[
+            { text: 'First value', option: 'value1' },
+            { text: 'Second value', option: 'value2' },
+            { text: 'Third value', option: 'value3' },
+        ]}
+    />
+ *
+ * @type {React.FC<{
+ *  values: [{ value: String, option: String}],
+ *  name: String,
+ *  className?: String
+ * }>}
+ */
+export const Radio = ({ values, name, className, ...props }) => {
     const [selected, setSelected] = useState(values[0].option);
 
     return (
-        <div {...props}>
+        <div {...props} className={className || ''}>
             {values.map((value) => (
                 <label
                     className="cursor-pointer flex items-center relative"

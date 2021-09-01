@@ -1,5 +1,23 @@
 import React from 'react';
 
+/**
+ * Component component displayer
+ * @component
+ *
+ * @example
+ *  <ComponentsDisplayer title="Boutons">
+        <Button>S'inscrire</Button>
+        <Button color="yellow">S'inscrire</Button>
+        <Button color="red">S'inscrire</Button>
+        <Button color="green">S'inscrire</Button>
+    </ComponentsDisplayer>
+ *
+ * @type {React.FC<{
+ *  title?: String,
+ *  children: React.ReactNode,
+ *  className?: String
+ * }>}
+ */
 export const ComponentsDisplayer = ({
     title,
     children,

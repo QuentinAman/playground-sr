@@ -2,6 +2,21 @@ import React from 'react';
 
 import { RequiredField } from '../';
 
+/**
+ * Component textarea
+ * @component
+ *
+ * @example
+ *   <Textarea required placeholder="Textarea" />
+ *
+ * @type {React.FC<{
+ *  className?: string,
+ *  required?: boolean
+ *  onInput?: (value: string) => void
+ *  value?: string
+ *  max?: number
+ * }>}
+ */
 export const Textarea = ({max, value = "", onInput, className = "", height = "h-full" , ...props }) => {
 
     /**

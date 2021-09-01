@@ -1,6 +1,20 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Icon } from '../';
 
+/**
+ * Component tool tip
+ * @component
+ *
+ * @example
+ *  <Tooltip className="justify-self-start">
+        Lorem ipsum
+    </Tooltip>
+ *
+ * @type {React.FC<{
+ *  className?: String,
+ *  children: React.ReactNode
+ * }>}
+ */
 export const Tooltip = ({ className, children, ...props }) => {
     const [isVisible, setIsVisible] = useState(false);
     const tooltipRef = useRef(null);
