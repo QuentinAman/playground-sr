@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Icon } from '../';
 
-export const InputFile = ({ color, title, className }) => {
+export const InputFile = ({ color, title, caution, className }) => {
     const [fileNumber, setFileNumber] = useState(0);
 
     return (
@@ -16,7 +16,7 @@ export const InputFile = ({ color, title, className }) => {
                 htmlFor="input-file"
                 className={`${
                     color ? `cbg-${color}` : 'cbg-white'
-                } button framed-item-p font-bold uppercase flex justify-center select-none w-full`}
+                } button framed-item-p font-bold uppercase flex justify-center select-none ${caution ? "w-max" : "w-full"}`}
             >
                 <div className="flex text-xs">
                     {fileNumber == 0 ? (
@@ -32,6 +32,10 @@ export const InputFile = ({ color, title, className }) => {
                     )}
                 </div>
             </label>
+            <div className="text-xs pt-1">
+                {caution}                       
+            </div>
         </div>
+        
     );
 };

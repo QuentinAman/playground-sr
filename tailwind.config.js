@@ -32,6 +32,7 @@ module.exports = {
                 '2.5px': '2.5px',
             },
             transitionProperty: {
+                'max-h': 'max-height',
                 tooltip: 'max-height opacity',
             },
             scale: {

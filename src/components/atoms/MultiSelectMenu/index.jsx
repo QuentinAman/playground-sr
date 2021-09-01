@@ -36,11 +36,13 @@ export const MultiSelectMenu = ({
     return (
         <div>
             <SelectMenu
+                {...props}
                 placeholder={placeholder}
                 values={remainingValues}
+                className="mb-2"
                 setSelected={(value) => handleSelectedValue('add', value)}
             />
-            <div>
+            <div className="flex gap-2 flex-wrap">
                 {selectedValues.map(({ text }, index) => (
                     <AnimatePresence>
                         <motion.div
@@ -50,9 +52,9 @@ export const MultiSelectMenu = ({
                             {...props}
                             className={`${
                                 className || ''
-                            } flex items-center px-1 py-0.5 rounded border-1 border-black cursor-pointer`}
+                            } flex items-center px-1 py-0.5 rounded border-1 border-black`}
                         >
-                            <span className="text-sm font-semibold">
+                            <span className="text-sm font-semibold whitespace-nowrap">
                                 {text}
                             </span>
                             <span
@@ -62,7 +64,7 @@ export const MultiSelectMenu = ({
                             >
                                 <Icon
                                     src="cross"
-                                    className="ml-2"
+                                    className="ml-2 cursor-pointer"
                                     width="10px"
                                 />
                             </span>

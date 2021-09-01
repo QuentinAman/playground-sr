@@ -23,6 +23,7 @@ import {
     Divider
 } from './components';
 import { ComponentsDisplayer } from './components';
+import { CompanyArea } from './components/templates/CompanyArea';
 
 export const App = () => {
     const [checkboxs, setCheckboxs] = useState([
@@ -66,6 +67,9 @@ export const App = () => {
 
     return (
         <div>
+            <ComponentsDisplayer color="gray-100" title="Company Area">
+                <CompanyArea/>
+            </ComponentsDisplayer>
             <ComponentsDisplayer columns="1" className="items-center" title="Dividers">
                 <Divider/>
                 <Divider>

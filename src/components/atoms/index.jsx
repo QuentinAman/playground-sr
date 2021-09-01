@@ -15,3 +15,6 @@ export * from './Checkbox';
 export * from './Link';
 export * from './MultiSelectMenu';
 export * from './Modal';
+export * from './InputPhone';
+export * from './DangerLink';
+export * from './ClipBoardText';
