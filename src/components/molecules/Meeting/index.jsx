@@ -13,7 +13,7 @@ import { SlotStatus, Button } from '../../atoms/';
  *  status: "available"|"unavailable"|"waiting"|"busy"|"confirmed",
  *  className?: String
  */
-export const Meeting = ({ status, ...props }) => {
+export const Meeting = ({ status, className, ...props }) => {
     const statusInfos = Status[status];
 
     return (

@@ -20,7 +20,7 @@ import { SlotStatus } from '../../atoms/SlotStatus';
  *  name: String,
  *  onClick: Function
  */
-export const Slot = ({ status, hours, name, onClick, ...props }) => {
+export const Slot = ({ status, hours, name, onClick, className, ...props }) => {
     const statusInfos = Status[status] || Status['unavailable'];
 
     return (
