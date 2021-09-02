@@ -3,6 +3,8 @@ module.exports = {
         extend: {
             gridTemplateColumns: {
                 'auto-fit': 'repeat(auto-fit, minmax(250px, 1fr))',
+                'auto-fit-1': 'repeat(auto-fit, minmax(10em, 1fr))',
+                'list-element': 'max-content 1fr max-content',
             },
             height: {
                 max: 'max-content',
@@ -32,6 +34,7 @@ module.exports = {
                 '2.5px': '2.5px',
             },
             transitionProperty: {
+                'max-h': 'max-height',
                 tooltip: 'max-height opacity',
             },
             scale: {

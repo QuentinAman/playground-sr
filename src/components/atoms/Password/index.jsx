@@ -22,6 +22,7 @@ export const Password = ({ placeholder, className, ...props }) => {
             <Input
                 {...props}
                 placeholder={placeholder}
+                style={{ paddingRight: '2em' }}
                 type={isHidden ? 'password' : 'text'}
                 className={`${className || ''} pr-6`}
             />

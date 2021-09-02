@@ -19,6 +19,6 @@ export const Button = ({ color, className, width = 'w-max', ...props }) => (
         {...props}
         className={`${color ? `cbg-${color}` : 'cbg-white'} ${
             className || ''
-        } ${width} button framed-item-p font-bold uppercase`}
+        } ${width} ${color === "blue" ? "text-white" : "text-black"} button framed-item-p font-bold uppercase`}
     />
 );

@@ -27,16 +27,19 @@ import { RequiredField } from '../RequiredField';
  *  selected: {text: String, option: String},
  *  setSelected: Function,
  *  values: [{text: String, option: String}],
- *  placeholder?: String
+ *  placeholder?: String,
+ *  width?: string
  * }>}
  */
 export const SelectMenu = ({
     required,
+    className = '',
+    color = "gray-50",
     selected,
     setSelected,
     values,
     placeholder = '',
-    className,
+    width = "w-full",
     ...props
 }) => {
     const [isVisible, setIsVisible] = useState(false);
@@ -44,14 +47,10 @@ export const SelectMenu = ({
     return (
         <div
             {...props}
-            className={`${
-                className || ''
-            } border-1 rounded border-black min-w-14 font-semibold select-none h-max relative`}
+            className={`border-1 rounded border-black ${width} font-semibold select-none h-max relative ${className}`}
         >
             <div
-                className={`relative px-2 cursor-pointer py-3 rounded border-black bg-gray-50 ${
-                    isVisible && 'border-b-1'
-                }`}
+                className={`relative pr-10 pl-2 cursor-pointer py-3 rounded bg-${color}`}
                 onClick={() => setIsVisible(!isVisible)}
             >
                 <p className="max-w-94 text-sm">
@@ -66,9 +65,9 @@ export const SelectMenu = ({
                 />
             </div>
             <ul
-                className={`overflow-scroll transition-all duration-300 max-h-0 ${
-                    isVisible && 'max-h-32'
-                }`}
+                className={`overflow-scroll absolute bg-white top-full right-0 left-0 transition-all duration-300 max-h-0 z-10 ${
+                    isVisible && 'max-h-32 transition-max-h border rounded  border-black'
+                }` }
             >
                 {values.map((value) => (
                     <li

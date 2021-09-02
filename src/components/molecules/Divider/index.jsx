@@ -12,7 +12,6 @@ import React from 'react';
  *
  * @type {React.FC<{
  *  className?: String,
- *  children: React.ReactNode,
  *  right?: String,
  *  bottom?: String;
  * }>}
