@@ -1,6 +1,6 @@
-import { AnimatePresence, motion } from 'framer-motion';
+import { AnimatePresence } from 'framer-motion';
 import React, { useEffect, useState } from 'react';
-import { Icon, SelectMenu } from '../';
+import { SelectMenu, RemovableTag } from '../';
 
 /**
  * Component multi select menu
@@ -69,34 +69,14 @@ export const MultiSelectMenu = ({
                 setSelected={(value) => handleSelectedValue('add', value)}
             />
             <div>
-                {selectedValues.map(({ text }, index) => (
-                    <AnimatePresence>
-                        <motion.div
-                            initial={{ width: 0 }}
-                            animate={{ width: 'max-content' }}
-                            exit={{ width: 0 }}
-                            {...props}
-                            className={`${
-                                className || ''
-                            } flex items-center px-1 py-0.5 rounded border-1 border-black cursor-pointer`}
-                        >
-                            <span className="text-sm font-semibold">
-                                {text}
-                            </span>
-                            <span
-                                onClick={() =>
-                                    handleSelectedValue('remove', index)
-                                }
-                            >
-                                <Icon
-                                    src="cross"
-                                    className="ml-2"
-                                    width="10px"
-                                />
-                            </span>
-                        </motion.div>
-                    </AnimatePresence>
-                ))}
+                <AnimatePresence>
+                    {selectedValues.map(({ text }, index) => (
+                        <RemovableTag
+                            value={text}
+                            onClick={() => handleSelectedValue('remove', index)}
+                        />
+                    ))}
+                </AnimatePresence>
             </div>
         </div>
     );
