@@ -38,8 +38,8 @@ export const Textarea = ({
     };
 
     return (
-        <div>
-            <div className="relative textarea framed-item-p w-full">
+        <div className="w-full">
+            <div className="relative textarea framed-item-p">
                 <textarea
                     {...props}
                     rows="5"

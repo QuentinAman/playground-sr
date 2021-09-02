@@ -49,7 +49,7 @@ export const Tooltip = ({ className, children, ...props }) => {
             <Icon className="cursor-pointer" src="tooltip" />
             <div
                 ref={tooltipRef}
-                className={`w-max opacity-0 top-8 px-4 transition-tooltip duration-300 -translate-x-2/4 py-2 max-w-xs border-1 border-black absolute z-50 bg-gray-50 rounded-xl ${
+                className={`w-max opacity-0 top-8 px-4 transform transition-tooltip duration-300 -translate-x-2/4 py-2 max-w-xs border-1 border-black absolute z-50 bg-gray-50 rounded-xl ${
                     isVisible ? 'opacity-100' : ''
                 }`}
             >
