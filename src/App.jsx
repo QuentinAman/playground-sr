@@ -20,7 +20,9 @@ import {
     Slot,
     Meeting,
     ColorCard,
-    Divider
+    Divider,
+    InputList,
+    ListElement,
 } from './components';
 import { ComponentsDisplayer } from './components';
 
@@ -53,6 +55,8 @@ export const App = () => {
         option: 'value1',
     });
 
+    const [listInputValues, setListInputValues] = useState([]);
+
     const [multiSelectedValues, setMultiSelectedValues] = useState([
         { text: 'First value', option: 'value1' },
         { text: 'Seventh value', option: 'value7' },
@@ -66,8 +70,34 @@ export const App = () => {
 
     return (
         <div>
-            <ComponentsDisplayer columns="1" className="items-center" title="Dividers">
-                <Divider/>
+            <ComponentsDisplayer title="ListElements">
+                <ListElement
+                    content={{
+                        text: 'A propos de nous',
+                        value: 'https://www.google.com',
+                    }}
+                />
+                <ListElement
+                    content={{
+                        text: 'Mentions Légales',
+                        value: 'https://www.google.com',
+                    }}
+                    icon="clock"
+                />
+                <ListElement
+                    content={{
+                        text: 'Développeur Web',
+                        value: 'https://www.google.com',
+                    }}
+                    icon="tooltip"
+                />
+            </ComponentsDisplayer>
+            <ComponentsDisplayer
+                columns="1"
+                className="items-center"
+                title="Dividers"
+            >
+                <Divider />
                 <Divider>
                     <Button>Button 1</Button>
                     <Button>Button 2</Button>
@@ -168,6 +198,11 @@ export const App = () => {
                 <Input required placeholder="Texte" />
                 <Password placeholder="Mot de passe" />
                 <Password required placeholder="Mot de passe" />
+                <InputList
+                    selectedValues={listInputValues}
+                    setSelectedValues={setListInputValues}
+                    placeholder="Ajouter un lien vidéo"
+                />
             </ComponentsDisplayer>
 
             <ComponentsDisplayer title="Textareas">

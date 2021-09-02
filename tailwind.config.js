@@ -3,6 +3,7 @@ module.exports = {
         extend: {
             gridTemplateColumns: {
                 'auto-fit': 'repeat(auto-fit, minmax(250px, 1fr))',
+                'list-element': 'max-content 1fr max-content',
             },
             height: {
                 max: 'max-content',
