@@ -20,7 +20,9 @@ export const CompanyArea = ({ ...props }) => {
         option: 'value1',
     })
 
-    const [listInputValues, setListInputValues] = useState([]);
+    const [listInputVideo, setListInputVideo] = useState([]);
+
+    const [listInputContract, setListInputContract] = useState([]);
 
     const [multiSelectedValues, setMultiSelectedValues] = useState([]);
 
@@ -100,8 +102,13 @@ export const CompanyArea = ({ ...props }) => {
                         ]}
                     />
                     <div>
-                        <h3>Contrats proposés</h3>
-                        
+                        <h3 className="mb-2">Contrats proposés</h3>
+                        <InputList
+                            type="RemovableTag"
+                            placeholder="Ajouter un contrat"
+                            selectedValues={listInputContract}
+                            setSelectedValues={setListInputContract}
+                        />
                     </div>
                 </div>
                 <div className="grid gap-10">
@@ -109,8 +116,9 @@ export const CompanyArea = ({ ...props }) => {
                         <h3>Ajouter une vidéo</h3>
                         <p className="text-xs font-light mb-1">Youtube, vimeo vidéos sont autorisés</p>
                         <InputList
-                            selectedValues={listInputValues}
-                            setSelectedValues={setListInputValues}
+                            type="ListElement"
+                            selectedValues={listInputVideo}
+                            setSelectedValues={setListInputVideo}
                             placeholder="Ajouter un lien vidéo"
                         />
                     </div>
@@ -188,7 +196,6 @@ export const CompanyArea = ({ ...props }) => {
                             <Slot status="busy" name="Soro Founvarah Bellucci" hours="14h00 - 14h15" onClick={() => console.log('busy')}/>
                             <Slot status="waiting" name="Soro Founvarah Bellucci" hours="14h00 - 14h15" onClick={() => console.log('waiting')}/>
                             <Slot status="available" hours="14h00 - 14h15" onClick={() => console.log('available')}/>
-                            <Slot status="available" hours="14h00 - 14h15" onClick={() => console.log('available')}/>
                             <Slot status="waiting" name="Soro Founvarah Bellucci" hours="14h00 - 14h15" onClick={() => console.log('waiting')}/>
                             <Slot status="available" hours="14h00 - 14h15" onClick={() => console.log('available')}/>
                             <Slot status="unavailable" hours="14h00 - 14h15" onClick={() => console.log('unavailable')}/>
@@ -196,7 +203,6 @@ export const CompanyArea = ({ ...props }) => {
                             <Slot status="busy" name="Soro Founvarah Bellucci" hours="14h00 - 14h15" onClick={() => console.log('busy')}/>
                             <Slot status="busy" name="Soro Founvarah Bellucci" hours="14h00 - 14h15" onClick={() => console.log('busy')}/>
                             <Slot status="waiting" name="Soro Founvarah Bellucci" hours="14h00 - 14h15" onClick={() => console.log('waiting')}/>
-                            <Slot status="available" hours="14h00 - 14h15" onClick={() => console.log('available')}/>
                     </div>
                     <div className="mt-10 flex flex-row-reverse">
                         <Button>Liste des participants</Button>
