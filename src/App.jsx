@@ -57,6 +57,7 @@ export const App = () => {
     });
 
     const [listInputValues, setListInputValues] = useState([]);
+    const [listInputValuesBis, setListInputValuesBis] = useState([]);
 
     const [multiSelectedValues, setMultiSelectedValues] = useState([
         { text: 'First value', option: 'value1' },
@@ -203,9 +204,16 @@ export const App = () => {
                 <Password placeholder="Mot de passe" />
                 <Password required placeholder="Mot de passe" />
                 <InputList
+                    type="ListElement"
                     selectedValues={listInputValues}
                     setSelectedValues={setListInputValues}
                     placeholder="Ajouter un lien vidéo"
+                />
+                <InputList
+                    type="RemovableTag"
+                    placeholder="Ajouter un contrat"
+                    selectedValues={listInputValuesBis}
+                    setSelectedValues={setListInputValuesBis}
                 />
             </ComponentsDisplayer>
 
