@@ -14,7 +14,7 @@ import { SlotStatus } from '../../atoms/SlotStatus';
     />
  *
  * @type {React.FC<{
- *  status: "available"|"unavailable"|"waiting"|"busy"|"confirmed",
+ *  status: "available"|"unavailable"|"waiting"|"busy",
  *  className?: String,
  *  hours: String,
  *  name: String,
@@ -28,11 +28,11 @@ export const Slot = ({ status, hours, name, onClick, className, ...props }) => {
             {...props}
             className={`${className || ''} cbg-${
                 statusInfos.color
-            } max-w-slotCard framed-item-p cursor-pointer flex flex-col items-center text-center`}
+            } max-w-slotCard framed-item py-2 px-1 cursor-pointer flex flex-col items-center text-center`}
             onClick={onClick}
         >
-            <p>{hours}</p>
-            <p className={'my-2.5'}>{name}</p>
+            <p className="text-sm">{hours}</p>
+            <p className="text-sm my-2.5">{name}</p>
             <SlotStatus status={status} />
         </div>
     );

@@ -14,7 +14,7 @@ import { Icon } from '../';
  *  text?: String
  * }>}
  */
-export const InputFile = ({ color, text, className, ...props }) => {
+export const InputFile = ({ color, text, className, caution, ...props }) => {
     const [fileNumber, setFileNumber] = useState(0);
 
     return (

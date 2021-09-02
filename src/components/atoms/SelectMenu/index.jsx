@@ -27,7 +27,8 @@ import { RequiredField } from '../RequiredField';
  *  selected: {text: String, option: String},
  *  setSelected: Function,
  *  values: [{text: String, option: String}],
- *  placeholder?: String
+ *  placeholder?: String,
+ *  width?: string
  * }>}
  */
 export const SelectMenu = ({
@@ -38,7 +39,7 @@ export const SelectMenu = ({
     setSelected,
     values,
     placeholder = '',
-    className,
+    width = "w-full",
     ...props
 }) => {
     const [isVisible, setIsVisible] = useState(false);
@@ -46,10 +47,10 @@ export const SelectMenu = ({
     return (
         <div
             {...props}
-            className={`border-1 rounded border-black w-full font-semibold select-none h-max relative ${className}`}
+            className={`border-1 rounded border-black ${width} font-semibold select-none h-max relative ${className}`}
         >
             <div
-                className={`relative px-2 cursor-pointer py-3 rounded bg-${color}`}
+                className={`relative pr-10 pl-2 cursor-pointer py-3 rounded bg-${color}`}
                 onClick={() => setIsVisible(!isVisible)}
             >
                 <p className="max-w-94 text-sm">
