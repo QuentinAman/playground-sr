@@ -66,8 +66,10 @@ export const MultiSelectMenu = ({
     return (
         <div {...props}>
             <SelectMenu
+                {...props}
                 placeholder={placeholder}
                 values={remainingValues}
+                className="mb-2"
                 setSelected={(value) => handleSelectedValue('add', value)}
             />
             <div className="flex flex-wrap mt-3">

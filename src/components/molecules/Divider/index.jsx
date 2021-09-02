@@ -11,10 +11,9 @@ import React from 'react';
     </Divider>
  *
  * @type {React.FC<{
- *  className?: string,
- *  children: React.ReactNode,
- *  right?: string,
- *  bottom?: string;
+ *  className?: String,
+ *  right?: String,
+ *  bottom?: String;
  * }>}
  */
 export const Divider = ({ children, className, right, bottom, ...props }) => {

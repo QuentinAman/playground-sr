@@ -9,11 +9,8 @@ import { RequiredField } from '../';
  *  <Input placeholder="Email" required />
  *
  * @type {React.FC<{
- *  className?: string,
- *  placeholder?: string,
- *  required?: Boolean,
- *  value: string,
- *  setValue: (value: string) => void
+ *  className?: String,
+ *  placeholder?: String,
  * }>}
  */
 export const Input = ({
@@ -31,7 +28,7 @@ export const Input = ({
                 value={value}
                 onChange={(e) => setValue(e.currentTarget.value)}
                 placeholder={placeholder}
-                className="input"
+                className="input h-full"
             />
             {required && <RequiredField />}
         </div>
