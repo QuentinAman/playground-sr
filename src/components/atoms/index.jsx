@@ -17,6 +17,5 @@ export * from './Modal';
 export * from './InputPhone';
 export * from './DangerLink';
 export * from './ClipBoardText';
-export * from './InputList';
 export * from './ListElement';
 export * from './RemovableTag';
