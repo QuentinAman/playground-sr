@@ -7,10 +7,10 @@ import { RequiredField } from '../';
  * @component
  *
  * @example
- *   <Textarea required placeholder="Textarea" />
+ *  <Textarea required placeholder="Textarea" />
  *
  * @type {React.FC<{
- *  className?: String,
+ *  className?: string,
  *  required?: Boolean
  * }>}
  */

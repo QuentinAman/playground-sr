@@ -13,16 +13,16 @@ import React from 'react';
     </ComponentsDisplayer>
  *
  * @type {React.FC<{
- *  title?: String,
+ *  title?: string,
  *  children: React.ReactNode,
- *  className?: String
+ *  className?: string
  * }>}
  */
 export const ComponentsDisplayer = ({
     title,
     children,
     className,
-    columns = "auto-fit",
+    columns = 'auto-fit',
     ...props
 }) => (
     <div

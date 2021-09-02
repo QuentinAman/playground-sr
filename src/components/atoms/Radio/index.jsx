@@ -6,7 +6,7 @@ import { Icon } from '../';
  * @component
  *
  * @example
- *   <Radio
+ *  <Radio
         values={[
             { text: 'First value', option: 'value1' },
             { text: 'Second value', option: 'value2' },
@@ -15,9 +15,9 @@ import { Icon } from '../';
     />
  *
  * @type {React.FC<{
- *  values: [{ value: String, option: String}],
- *  name: String,
- *  className?: String
+ *  values: [{ value: string, option: string}],
+ *  name: string,
+ *  className?: string
  * }>}
  */
 export const Radio = ({ values, name, className, ...props }) => {

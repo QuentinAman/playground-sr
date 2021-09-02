@@ -16,9 +16,9 @@ import { Icon } from '../';
  * @type {React.FC<{
  *  isChecked: Boolean,
  *  setIsChecked: Function,
- *  name?: String,
- *  label?: String,
- *  className?: String
+ *  name?: string,
+ *  label?: string,
+ *  className?: string
  * }>}
  */
 export const Checkbox = ({

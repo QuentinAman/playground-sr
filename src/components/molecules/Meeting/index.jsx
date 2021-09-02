@@ -7,11 +7,11 @@ import { SlotStatus, Button } from '../../atoms/';
  * @component
  *
  * @example
- *   <Button width="w-full" color="blue">My button</Button>
+ *  <Button width="w-full" color="blue">My button</Button>
  *
  * @type {React.FC<{
  *  status: "available"|"unavailable"|"waiting"|"busy"|"confirmed",
- *  className?: String
+ *  className?: string
  */
 export const Meeting = ({ status, className, ...props }) => {
     const statusInfos = Status[status];

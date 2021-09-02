@@ -11,7 +11,7 @@ import { Icon } from '../';
     </Tooltip>
  *
  * @type {React.FC<{
- *  className?: String,
+ *  className?: string,
  *  children: React.ReactNode
  * }>}
  */

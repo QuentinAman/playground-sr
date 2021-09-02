@@ -24,11 +24,11 @@ import { Icon } from '../../atoms';
  *
  * @type {React.FC<{
  *  children: React.ReactNode,
- *  className?: String,
- *  title: String,
- *  textColor: String,
- *  bgColor: String,
- *  icon: String
+ *  className?: string,
+ *  title: string,
+ *  textColor: string,
+ *  bgColor: string,
+ *  icon: string
  * }>}
  */
 export const Card = ({

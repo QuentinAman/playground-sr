@@ -6,11 +6,11 @@ import { Icon } from '../Icon';
  * @component
  *
  * @example
- *   <Modal title="Log in">Log in form</Link>
+ *  <Modal title="Log in">Log in form</Link>
  *
  * @type {React.FC<{
- *  title: String,
- *  className?: String,
+ *  title: string,
+ *  className?: string,
  *  children: React.ReactNode
  * }>}
  */

@@ -5,12 +5,12 @@ import React from 'react';
  * @component
  *
  * @example
- *   <Icon width="12px" src="arrow"/>
+ *  <Icon width="12px" src="arrow"/>
  *
  * @type {React.FC<{
- *  src: String,
- *  className?: String,
- *  width?: String;
+ *  src: string,
+ *  className?: string,
+ *  width?: string;
  * }>}
  */
 export const Icon = ({ src, className, width, ...props }) => (

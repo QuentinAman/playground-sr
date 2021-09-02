@@ -7,7 +7,7 @@ import { Card } from '../../molecules';
  * @component
  *
  * @example
- *   <Slot
+ *  <Slot
         status="available"
         hours="14h00 - 14h15"
         onClick={() => console.log('available')}
@@ -15,14 +15,14 @@ import { Card } from '../../molecules';
  *
  * @type {React.FC<{
  *  status: "available"|"unavailable"|"waiting"|"busy"|"confirmed",
- *  title: String,
- *  bgColor: String,
- *  textColor?: String,
- *  className?: String,
- *  icon: String,
- *  subTitle: String,
- *  description: String,
- *  logoOrganizer: [String]
+ *  title: string,
+ *  bgColor: string,
+ *  textColor?: string,
+ *  className?: string,
+ *  icon: string,
+ *  subTitle: string,
+ *  description: string,
+ *  logoOrganizer: [string]
  */
 export const AreaCard = ({
     title,
@@ -48,10 +48,11 @@ export const AreaCard = ({
             <p className="mb-3 text-sm">{description}</p>
             <Button className="mb-3">Visiter</Button>
             <div className="flex">
-                {logoOrganizer.map((logo) => {
+                {logoOrganizer.map((logo, index) => {
                     return (
                         <img
                             className="mr-6"
+                            key={index}
                             src={`/images/organizers/${logo}`}
                         />
                     );

@@ -1,13 +1,13 @@
 import { AnimatePresence } from 'framer-motion';
 import React, { useEffect, useState } from 'react';
-import { SelectMenu, RemovableTag } from '../';
+import { SelectMenu, RemovableTag } from '../../atoms';
 
 /**
  * Component multi select menu
  * @component
  *
  * @example
- *   <MultiSelectMenu
+ *  <MultiSelectMenu
         placeholder="Select one or more values"
         selectedValues={multiSelectedValues}
         setSelectedValues={setMultiSelectedValues}
@@ -23,11 +23,11 @@ import { SelectMenu, RemovableTag } from '../';
     />
  *
  * @type {React.FC<{
- *  selectedValues: [{text: String, option: String}],
+ *  selectedValues: [{text: string, option: string}],
  *  setSelectedValues: Function,
- *  placeholder?: String,
- *  values: [{text: String, option: String}]
- *  className?: String,
+ *  placeholder?: string,
+ *  values: [{text: string, option: string}]
+ *  className?: string,
  * }>}
  */
 export const MultiSelectMenu = ({
@@ -57,22 +57,25 @@ export const MultiSelectMenu = ({
     };
 
     useEffect(() => {
-        const newArray = values.filter((x) => !selectedValues.includes(x));
-        setRemainingValues(values.filter((x) => !selectedValues.includes(x)));
+        const newArray = values.filter(
+            (x) => !selectedValues.find((y) => y.option === x.option),
+        );
+        setRemainingValues(newArray);
     }, [selectedValues]);
 
     return (
-        <div>
+        <div {...props}>
             <SelectMenu
                 placeholder={placeholder}
                 values={remainingValues}
                 setSelected={(value) => handleSelectedValue('add', value)}
             />
-            <div>
+            <div className="flex flex-wrap mt-3">
                 <AnimatePresence>
                     {selectedValues.map(({ text }, index) => (
                         <RemovableTag
                             value={text}
+                            key={index}
                             onClick={() => handleSelectedValue('remove', index)}
                         />
                     ))}

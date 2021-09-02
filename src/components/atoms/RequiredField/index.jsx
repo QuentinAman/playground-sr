@@ -5,6 +5,6 @@ import React from 'react';
  * @component
  *
  * @example
- *   <RequiredField />
+ *  <RequiredField />
  */
 export const RequiredField = () => <div className="required" />;

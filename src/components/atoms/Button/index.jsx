@@ -5,12 +5,12 @@ import React from 'react';
  * @component
  *
  * @example
- *   <Button width="w-full" color="blue">My button</Button>
+ *  <Button width="w-full" color="blue">My button</Button>
  *
  * @type {React.FC<{
  *  children: React.ReactNode,
- *  className?: String,
- *  width?: String,
+ *  className?: string,
+ *  width?: string,
  *  color?: "green"|"red"|"yellow"|"white"
  * }>}
  */

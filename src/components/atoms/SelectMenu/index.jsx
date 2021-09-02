@@ -23,11 +23,11 @@ import { RequiredField } from '../RequiredField';
  *
  * @type {React.FC<{
  *  required: Boolean,
- *  className?: String,
- *  selected: {text: String, option: String},
+ *  className?: string,
+ *  selected: {text: string, option: string},
  *  setSelected: Function,
- *  values: [{text: String, option: String}],
- *  placeholder?: String
+ *  values: [{text: string, option: string}],
+ *  placeholder?: string
  * }>}
  */
 export const SelectMenu = ({
@@ -49,7 +49,7 @@ export const SelectMenu = ({
             } border-1 rounded border-black min-w-14 font-semibold select-none h-max relative`}
         >
             <div
-                className={`relative px-2 cursor-pointer py-3 rounded border-black bg-gray-50 ${
+                className={`relative pl-2 pr-8 cursor-pointer py-3 rounded border-black bg-gray-50 ${
                     isVisible && 'border-b-1'
                 }`}
                 onClick={() => setIsVisible(!isVisible)}
@@ -60,7 +60,7 @@ export const SelectMenu = ({
                 <Icon
                     src="arrow"
                     width="12px"
-                    className={`transition-transform duration-300 absolute right-3 top-4 ${
+                    className={`transition-transform duration-300 absolute right-3 transform top-1/2 -translate-y-1/2 ${
                         isVisible ? 'rotate-180' : 'rotate-0'
                     }`}
                 />

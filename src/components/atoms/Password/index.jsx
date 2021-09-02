@@ -6,11 +6,11 @@ import { Input, Icon } from '../';
  * @component
  *
  * @example
- *   <Password placeholder="Password" required/>
+ *  <Password placeholder="Password" required/>
  *
  * @type {React.FC<{
- *  placeholder: String,
- *  className?: String,
+ *  placeholder: string,
+ *  className?: string,
  *  required?: Boolean
  * }>}
  */

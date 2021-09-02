@@ -6,18 +6,19 @@ import { Icon } from '..';
  * @component
  *
  * @example
- *   <InformationTag color="blue" icon="arrow" text="Agriculture / Esp.Verts" />
+ *  <InformationTag color="blue" icon="arrow" text="Agriculture / Esp.Verts" />
  *
  * @type {React.FC<{
- *  text: String
- *  className?: String,
- *  icon?: String
+ *  text: string
+ *  className?: string,
+ *  icon?: string
  *  color?: "green"|"red"|"yellow"|"white"
  * }>}
  */
 export const InformationTag = ({ className, color, text, icon, ...props }) => {
     return (
         <div
+            {...props}
             className={` ${
                 className || ''
             } flex w-max rounded-md py-0.5 px-2 text-xs items-center uppercase font-semibold prevent-hover cbg-${

@@ -6,14 +6,14 @@ import { Icon } from '../Icon';
  * @component
  *
  * @example
- *   <Link href="localhost/home" isUnique={true} color="blue">Go to home</Link>
+ *  <Link href="localhost/home" isUnique={true} color="blue">Go to home</Link>
  *
  * @type {React.FC<{
- *  href: String,
+ *  href: string,
  *  isUnique: Boolean,
  *  color: "blue"|"darkred"|"lightgray"|"gray"|"white",
- *  className?: String,
- *  text?: String,
+ *  className?: string,
+ *  text?: string,
  *  children: React.ReactNode
  * }>}
  */

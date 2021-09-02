@@ -7,7 +7,7 @@ import { SlotStatus } from '../../atoms/SlotStatus';
  * @component
  *
  * @example
- *   <Slot
+ *  <Slot
         status="available"
         hours="14h00 - 14h15"
         onClick={() => console.log('available')}
@@ -15,9 +15,9 @@ import { SlotStatus } from '../../atoms/SlotStatus';
  *
  * @type {React.FC<{
  *  status: "available"|"unavailable"|"waiting"|"busy"|"confirmed",
- *  className?: String,
- *  hours: String,
- *  name: String,
+ *  className?: string,
+ *  hours: string,
+ *  name: string,
  *  onClick: Function
  */
 export const Slot = ({ status, hours, name, onClick, className, ...props }) => {

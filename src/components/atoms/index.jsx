@@ -13,8 +13,6 @@ export * from './Radio';
 export * from './Tooltip';
 export * from './Checkbox';
 export * from './Link';
-export * from './MultiSelectMenu';
 export * from './Modal';
-export * from './InputList';
 export * from './ListElement';
 export * from './RemovableTag';

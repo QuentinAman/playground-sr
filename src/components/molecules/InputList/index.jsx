@@ -1,7 +1,27 @@
 import { AnimatePresence } from 'framer-motion';
 import React, { useState } from 'react';
-import { Input, Icon, ListElement, RemovableTag } from '../';
+import { Input, Icon, ListElement, RemovableTag } from '../../atoms';
 
+/**
+ * Component Inputlist
+ * @component
+ *
+ * @example
+ *  <InputList
+        type="ListElement"
+        selectedValues={listInputValues}
+        setSelectedValues={setListInputValues}
+        placeholder="Ajouter un lien vidéo"
+    />
+ *
+ * @type {React.FC<{
+ *  className?: string,
+ *  placeholder?: string,
+ *  selectedValues: [{value: string, text: string}] | [string],
+ *  setSelectedValues: (value: {value: string, text: string} | string) => void,
+ *  type?: "ListElement"|"RemovableTag"
+ * }>}
+ */
 export const InputList = ({
     className,
     placeholder,
@@ -48,7 +68,11 @@ export const InputList = ({
                     src="plus"
                 />
             </div>
-            <div className="flex flex-col w-full mt-3">
+            <div
+                className={`flex w-full mt-3 ${
+                    type == 'ListElement' ? 'flex-col' : 'flex-wrap'
+                }`}
+            >
                 <AnimatePresence>
                     {selectedValues.map((value, index) => {
                         if (type == 'ListElement')

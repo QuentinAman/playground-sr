@@ -6,12 +6,12 @@ import { Icon } from '../';
  * @component
  *
  * @example
- *   <InputFile color="blue" text="Import a file"/>
+ *  <InputFile color="blue" text="Import a file"/>
  *
  * @type {React.FC<{
  *  color: "green"|"red"|"yellow"|"white",
- *  className?: String,
- *  text?: String
+ *  className?: string,
+ *  text?: string
  * }>}
  */
 export const InputFile = ({ color, text, className, ...props }) => {

@@ -257,6 +257,7 @@ export const App = () => {
                                 isChecked={checked}
                                 label={label}
                                 name={name}
+                                key={index}
                                 setIsChecked={handleCheckboxsChange(index)}
                             />
                         ))}

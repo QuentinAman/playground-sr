@@ -6,12 +6,14 @@ import { RequiredField } from '../';
  * @component
  *
  * @example
- *   <Input placeholder="Email" required />
+ *  <Input placeholder="Email" required />
  *
  * @type {React.FC<{
- *  className?: String,
- *  placeholder?: String,
- *  required?: Boolean
+ *  className?: string,
+ *  placeholder?: string,
+ *  required?: Boolean,
+ *  value: string,
+ *  setValue: (value: string) => void
  * }>}
  */
 export const Input = ({
