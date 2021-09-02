@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { Button, ClipBoardText, DangerLink, Icon, Input, InputFile, InputPhone, MultiSelectMenu, SelectMenu, Textarea } from '../../atoms'
+import { Button, ClipBoardText, DangerLink, Icon, Input, InputFile, InputList, InputPhone, MultiSelectMenu, SelectMenu, Textarea, ListElement } from '../../atoms'
 import { Divider, Slot } from '../../molecules';
 
 export const CompanyArea = ({ ...props }) => {
@@ -19,6 +19,8 @@ export const CompanyArea = ({ ...props }) => {
         text: 'a 10.06.2021 - Jeudi',
         option: 'value1',
     })
+
+    const [listInputValues, setListInputValues] = useState([]);
 
     const [multiSelectedValues, setMultiSelectedValues] = useState([]);
 
@@ -102,9 +104,43 @@ export const CompanyArea = ({ ...props }) => {
                         
                     </div>
                 </div>
-                <div className="">
+                <div className="grid gap-10">
+                    <div className="grid gap-1">
                         <h3>Ajouter une vidéo</h3>
-                        <p className="text-xs font-light">Youtube, vimeo vidéos sont autorisés</p>
+                        <p className="text-xs font-light mb-1">Youtube, vimeo vidéos sont autorisés</p>
+                        <InputList
+                            selectedValues={listInputValues}
+                            setSelectedValues={setListInputValues}
+                            placeholder="Ajouter un lien vidéo"
+                        />
+                    </div>
+                    <div className="grid gap-1">
+                        <h3>Ajouter un document</h3>
+                        <p className="text-xs font-light mb-1">Seulement les PDF sont autorisés.</p>
+                        <ListElement
+                            content={{
+                                text: 'A propos de nous',
+                                value: 'https://www.google.com',
+                            }}
+                        />                
+                        <ListElement
+                            content={{
+                                text: 'Mentions legales',
+                                value: 'https://www.google.com',
+                            }}
+                        />
+                        <Button className="mt-2">Déposer un document</Button>
+                    </div>
+                    <div className="grid gap-1">
+                        <h3 className="mb-1">Ajouter une vidéo</h3>
+                        <ListElement
+                            content={{
+                                text: 'Développeur C# .net',
+                                value: 'https://www.google.com',
+                            }}
+                        />
+                        <Button className="mt-2">Ajouter une offre</Button>
+                    </div>
                 </div>
                 <div className="col-span-3">
                     <Divider right ><Button width="w-44" color="green">Mettre à jour</Button></Divider>

@@ -15,10 +15,10 @@ export const ListElement = ({
                 className || ''
             } w-full grid grid-cols-list-element items-center border-b-1 pb-1.5`}
         >
-            <a href={content.value}>
+            <a href={content.value} target="_blank">
                 <Icon src={icon} width="12px" />
             </a>
-            <p className="px-2 text-sm">{content.text}</p>
+            <p className="px-2 text-sm font-thin">{content.text}</p>
             <Icon
                 src="remove"
                 className="cursor-pointer"
