@@ -13,11 +13,24 @@ import { RequiredField } from '../';
  *  placeholder?: String,
  * }>}
  */
-export const Input = ({ className, ...props }) => {
+export const Input = ({
+    className,
+    value = '',
+    setValue = () => {},
+    placeholder,
+    required,
+    ...props
+}) => {
     return (
         <div className={`framed-item-p w-full relative ${className || ''}`}>
-            <input {...props} className="input h-full" />
-            {props.required && <RequiredField />}
+            <input
+                {...props}
+                value={value}
+                onChange={(e) => setValue(e.currentTarget.value)}
+                placeholder={placeholder}
+                className="input h-full"
+            />
+            {required && <RequiredField />}
         </div>
     );
 };
